@@ -1,0 +1,47 @@
+{
+  "name": "rules",
+  "temp": "member",
+  "event-type": "6",
+  "_id": "qYwUy",
+  "actions": [
+    {
+      "title": "our server rules are",
+      "author": "",
+      "color": "RED",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "RULES",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "RULES",
+      "message": "Hey ${tempVars(\"member\")} before you start the fun please read our rules:\n${serverVars(\"rules\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "RULES",
+      "channel": "5",
+      "varName2": "member",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
