@@ -5,6 +5,18 @@
   "_id": "qYwUy",
   "actions": [
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "rules",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
       "title": "our server rules are",
       "author": "",
       "color": "RED",
