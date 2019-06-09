@@ -1,0 +1,204 @@
+{
+  "name": "wsetup",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "UZxSd",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "permission": "MANAGE_CHANNELS",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**ERROR:** You don't have permissions to use this command.\nRequired: `Manage Channel` Permission.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "info": "4",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "channel",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "channel",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Wrong Format:**\nsetupwelcome <#channel>",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "The welcome channel is now ${mentionedChannel}.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "changeType": "0",
+      "value": "tempVars(\"channel\")",
+      "storage": "2",
+      "varName": "welcome-channel",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "2",
+      "varName": "welcome-channel",
+      "name": "Save Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "ok now to the message what it will be?\n(you have 2 minutes)",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "content.length > 0 && author.id === '${member.id}'",
+      "max": "1",
+      "time": "120000",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "26",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Response Call Action"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "6",
+      "storage": "2",
+      "varName2": "masssge",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "ok done",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "36",
+      "storage": "1",
+      "varName2": "members",
+      "name": "Store Server Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "SNAME",
+      "name": "Store Server Info"
+    },
+    {
+      "title": "a new user has joined",
+      "author": "",
+      "color": "GREEN",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "WELC",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "WELC",
+      "message": "${serverVars(\"masssge\")} (joined user )\nyou are the ${tempVars(\"members\")} member in our server",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "WELC",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "comment": "credits: tired#1379",
+      "color": "#00ffff",
+      "name": "Comment"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "timed out",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
