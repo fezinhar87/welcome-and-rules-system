@@ -28,6 +28,23 @@
       "name": "End Action Sequence"
     },
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "rules",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "rulesm",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "rules",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
       "channel": "0",
       "varName": "",
       "message": "what is the rules that should be sent\n(you have 2 minutes)\nit will look like this:\nhello (joiend user) before you start the fun please read our rules:\n{your rules}",
